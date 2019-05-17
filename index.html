@@ -21,19 +21,99 @@
         }
     </style>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
     <script>
+       $(document).ready(function() {
+           $('#c').mousedown(function () {
+               alert("This.is.a.C!");
+               var cNote = document.getElementById('cAudio');
+               cNote.currentTime = 0;
+               cNote.play();
+           });
 
 
+       $('#d').mousedown(function () {
+           alert("This.is.a.D!");
+           var cNote = document.getElementById('dAudio');
+           cNote.currentTime = 0;
+           cNote.play();
+       });
+
+           $('#e').mousedown(function () {
+               alert("This.is.a.E!");
+               var eNote = document.getElementById('eAudio');
+               eNote.currentTime = 0;
+               eNote.play();
+           });
+
+
+           $('#F').mousedown(function () {
+               alert("This.is.a.F!");
+               var fNote = document.getElementById('fAudio');
+               fNote.currentTime = 0;
+               fNote.play();
+           });
+
+           $('#g').mousedown(function () {
+               alert("This.is.a.G!");
+               var cNote = document.getElementById('gAudio');
+               cNote.currentTime = 0;
+               cNote.play();
+           });
+           $('#a').mousedown(function () {
+               alert("This.is.a.A!");
+               var cNote = document.getElementById('aAudio');
+               cNote.currentTime = 0;
+               cNote.play();
+           });
+           $('#b').mousedown(function () {
+               alert("This.is.a.B!");
+               var cNote = document.getElementById('bAudio');
+               cNote.currentTime = 0;
+               cNote.play();
+           });
+       });
     </script>
 </head>
 
 
+
+
 <body>
-<audio controls>
+<audio id="cNote">
+    <source src="media/c_note.mp3" type="audio/mpeg">
+    <source src="media/c_note.wav" type="audio/wav">
+    <source src="media/c_note.ogg" type="audio/ogg">
+</audio>
+<audio id="dNote">
+    <source src="media/d_note.mp3" type="audio/mpeg">
+    <source src="media/d_note.wav" type="audio/wav">
+    <source src="media/d_note.ogg" type="audio/ogg">
+</audio>
+<audio id="fNote">
+    <source src="media/f_note.mp3" type="audio/mpeg">
+    <source src="media/f_note.wav" type="audio/wav">
+    <source src="media/f_note.ogg" type="audio/ogg">
+</audio>
+<audio id="gNote">
+    <source src="media/g_note.mp3" type="audio/mpeg">
+    <source src="media/g_note.wav" type="audio/wav">
+    <source src="media/g_note.ogg" type="audio/ogg">
+</audio>
+<audio id="aNote">
     <source src="media/a_note.mp3" type="audio/mpeg">
     <source src="media/a_note.wav" type="audio/wav">
     <source src="media/a_note.ogg" type="audio/ogg">
 </audio>
+<audio id="bNote">
+    <source src="media/b_note.mp3" type="audio/mpeg">
+    <source src="media/b_note.wav" type="audio/wav">
+    <source src="media/b_note.ogg" type="audio/ogg">
+</audio>
+
+
 
 <div id="instrument">
     <div id="c" class="box"></div>
