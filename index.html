@@ -5,14 +5,67 @@
         body {
             background-color: steelblue;
         }
-        .box {background-color: red; width: 500px; height: 100px;}
-        #c {background-color: red;}
-        #d {background-color: mediumvioletred;}
-        #e {background-color: cornflowerblue;}
-        #f {background-color: yellowgreen;}
-        #g {background-color: rebeccapurple;}
-        #a {background-color: blue;}
-        #b {background-color: green;}
+        .box {background-color: red; width: 500px; height: 100px; margin: 15px}
+        #c {background-color: red; border: 2px solid darkred;}
+        #d {background-color: gray; border: 2px solid dimgray;}
+        #e {background-color: cornflowerblue; border: 2px solid blue;}
+        #f {background-color: pink; border: 2px solid hotpink;}
+        #g {background-color: purple; border: 2px solid rebeccapurple;}
+        #a {background-color: blue; border: 2px solid darkblue;}
+        #b {background-color: green; border: 2px solid darkgreen;}
+
+        #c:hover {
+            background-color:darkred;
+            cursor: pointer;
+        }
+        #d:hover {
+            background-color:dimgray;
+            cursor: pointer;
+        }
+        #e:hover {
+            background-color:blue;
+            cursor: pointer;
+        }
+        #f:hover {
+            background-color:hotpink;
+            cursor: pointer;
+        }
+        #g:hover {
+            background-color:rebeccapurple;
+            cursor: pointer;
+        }
+        #a:hover {
+            background-color:darkblue;
+            cursor: pointer;
+        }
+        #b:hover {
+            background-color:darkgreen;
+            cursor: pointer;
+        }
+
+
+
+        #c:active {
+            background-color: orangered;
+        }
+        #d:active {
+            background-color: darkslategray;
+        }
+        #e:active {
+            background-color: skyblue;
+        }
+        #f:active {
+            background-color: deeppink;
+        }
+        #g:active {
+            background-color: mediumpurple;
+        }
+        #a:active {
+            background-color: royalblue;
+        }
+        #b:active {
+            background-color: seagreen;
+        }
 
         #instrument{
             height: 116px;
@@ -27,7 +80,6 @@
     <script>
        $(document).ready(function() {
            $('#c').mousedown(function () {
-               alert("This.is.a.C!");
                var cNote = document.getElementById('cAudio');
                cNote.currentTime = 0;
                cNote.play();
@@ -35,44 +87,38 @@
 
 
        $('#d').mousedown(function () {
-           alert("This.is.a.D!");
-           var cNote = document.getElementById('dAudio');
-           cNote.currentTime = 0;
-           cNote.play();
+           var dNote = document.getElementById('dAudio');
+           dNote.currentTime = 0;
+           dNote.play();
        });
 
            $('#e').mousedown(function () {
-               alert("This.is.a.E!");
                var eNote = document.getElementById('eAudio');
                eNote.currentTime = 0;
                eNote.play();
            });
 
 
-           $('#F').mousedown(function () {
-               alert("This.is.a.F!");
+           $('#f').mousedown(function () {
                var fNote = document.getElementById('fAudio');
                fNote.currentTime = 0;
                fNote.play();
            });
 
            $('#g').mousedown(function () {
-               alert("This.is.a.G!");
-               var cNote = document.getElementById('gAudio');
-               cNote.currentTime = 0;
-               cNote.play();
+               var gNote = document.getElementById('gAudio');
+               gNote.currentTime = 0;
+               gNote.play();
            });
            $('#a').mousedown(function () {
-               alert("This.is.a.A!");
-               var cNote = document.getElementById('aAudio');
-               cNote.currentTime = 0;
-               cNote.play();
+               var aNote = document.getElementById('aAudio');
+               aNote.currentTime = 0;
+               aNote.play();
            });
            $('#b').mousedown(function () {
-               alert("This.is.a.B!");
-               var cNote = document.getElementById('bAudio');
-               cNote.currentTime = 0;
-               cNote.play();
+               var bNote = document.getElementById('bAudio');
+               bNote.currentTime = 0;
+               bNote.play();
            });
        });
     </script>
@@ -82,32 +128,37 @@
 
 
 <body>
-<audio id="cNote">
+<audio id="cAudio">
     <source src="media/c_note.mp3" type="audio/mpeg">
     <source src="media/c_note.wav" type="audio/wav">
     <source src="media/c_note.ogg" type="audio/ogg">
 </audio>
-<audio id="dNote">
+<audio id="dAudio">
     <source src="media/d_note.mp3" type="audio/mpeg">
     <source src="media/d_note.wav" type="audio/wav">
     <source src="media/d_note.ogg" type="audio/ogg">
 </audio>
-<audio id="fNote">
+<audio id="eAudio">
+    <source src="media/e_note.mp3" type="audio/mpeg">
+    <source src="media/e_note.wav" type="audio/wav">
+    <source src="media/e_note.ogg" type="audio/ogg">
+</audio>
+<audio id="fAudio">
     <source src="media/f_note.mp3" type="audio/mpeg">
     <source src="media/f_note.wav" type="audio/wav">
     <source src="media/f_note.ogg" type="audio/ogg">
 </audio>
-<audio id="gNote">
+<audio id="gAudio">
     <source src="media/g_note.mp3" type="audio/mpeg">
     <source src="media/g_note.wav" type="audio/wav">
     <source src="media/g_note.ogg" type="audio/ogg">
 </audio>
-<audio id="aNote">
+<audio id="aAudio">
     <source src="media/a_note.mp3" type="audio/mpeg">
     <source src="media/a_note.wav" type="audio/wav">
     <source src="media/a_note.ogg" type="audio/ogg">
 </audio>
-<audio id="bNote">
+<audio id="bAudio">
     <source src="media/b_note.mp3" type="audio/mpeg">
     <source src="media/b_note.wav" type="audio/wav">
     <source src="media/b_note.ogg" type="audio/ogg">
